@@ -12,8 +12,7 @@ function formatVRF(vrfNum){
 }
 
 async function genToken(){
-    //var vrfNum = await vrfNumber();
-    var vrfNum = 92271226132278005394432530392718590936766961242647985129799698783821279431819;
+    var vrfNum = await vrfNumber();
     return formatVRF(vrfNum);
 }
 
