@@ -21,6 +21,11 @@ const TokenGenerator = () => {
 
     return (
     <div>
+        <h1 style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            }}>2FA Using Chainlink VRF</h1>
         <div style={{
             display: 'flex',
             alignItems: 'center',
