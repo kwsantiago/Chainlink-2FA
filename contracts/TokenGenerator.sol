@@ -45,10 +45,10 @@ contract TokenGenerator is Ownable, VRFConsumerBase {
      */
     function fulfillRandomness(bytes32 requestId, uint256 randomness) internal override {
         randomResult = randomness;
-        genNewToken();
+        newToken();
     }
     
-    function genNewToken() internal {
+    function newToken() internal {
         uint256 tmp = randomResult;
         delete token;
         for(uint256 i = 0; i < 6; i++){
@@ -57,7 +57,7 @@ contract TokenGenerator is Ownable, VRFConsumerBase {
         }
     }
     
-    function newToken() external onlyOwner {
+    function genNewToken() external onlyOwner {
         uint256 blockValue = uint256(blockhash(block.number.sub(1)));
         getRandomNumber(blockValue);
     }
